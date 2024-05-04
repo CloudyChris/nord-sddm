@@ -67,19 +67,19 @@ SessionManagementScreen {
 
         Layout.fillWidth: true
 
-        onAccepted: {
+        function onAccepted () {
             if (root.loginScreenUiVisible) {
                 startLogin();
             }
         }
 
-        Keys.onEscapePressed: {
+        function Keys.onEscapePressed () {
             mainStack.currentItem.forceActiveFocus();
         }
 
         //if empty and left or right is pressed change selection in user switch
         //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
-        Keys.onPressed: {
+        function Keys.onPressed () {
             if (event.key == Qt.Key_Left && !text) {
                 userList.decrementCurrentIndex();
                 event.accepted = true
@@ -92,7 +92,7 @@ SessionManagementScreen {
 
         Connections {
             target: sddm
-            onLoginFailed: {
+            function onLoginFailed () {
                 passwordBox.selectAll()
                 passwordBox.forceActiveFocus()
             }
@@ -129,7 +129,7 @@ SessionManagementScreen {
             opacity: enabled ? 1.0 : 1.0
         }
 
-        onClicked: startLogin();
+        function onClicked () { startLogin(); }
     }
 
 }
