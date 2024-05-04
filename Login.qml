@@ -52,10 +52,11 @@ SessionManagementScreen {
         focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
 
-        onAccepted:
+        function onAccepted () {
             if (root.loginScreenUiVisible) {
                 passwordBox.forceActiveFocus()
             }
+        }
     }
 
     Input {
@@ -73,13 +74,13 @@ SessionManagementScreen {
             }
         }
 
-        function Keys.onEscapePressed () {
+        Keys.onEscapePressed: {
             mainStack.currentItem.forceActiveFocus();
         }
 
         //if empty and left or right is pressed change selection in user switch
         //this cannot be in keys.onLeftPressed as then it doesn't reach the password box
-        function Keys.onPressed () {
+        Keys.onPressed: {
             if (event.key == Qt.Key_Left && !text) {
                 userList.decrementCurrentIndex();
                 event.accepted = true
