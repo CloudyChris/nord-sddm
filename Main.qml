@@ -87,7 +87,7 @@ PlasmaCore.ColorScope {
             }
         }
 
-        function Keys.onPressed () {
+        Keys.onPressed: {
             uiVisible = true;
             event.accepted = false;
         }
