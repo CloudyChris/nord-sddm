@@ -31,15 +31,15 @@ Item {
 
     activeFocusOnTab: true
 
-    property int iconSize: units.gridUnit * 2.5
+    property int iconSize: PlasmaCore.Units.gridUnit * 2.5
 
-    implicitWidth: Math.max(iconSize + units.largeSpacing * 2, label.contentWidth)
-    implicitHeight: iconSize + units.smallSpacing + label.implicitHeight
+    implicitWidth: Math.max(iconSize + PlasmaCore.Units.largeSpacing * 2, label.contentWidth)
+    implicitHeight: iconSize + PlasmaCore.Units.smallSpacing + label.implicitHeight
 
     opacity: activeFocus || containsMouse ? 1.5 : 0.97
     Behavior on opacity {
         PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-            duration: units.longDuration * 2
+            duration: PlasmaCore.Units.longDuration * 2
             easing.type: Easing.InOutQuad
         }
     }
@@ -61,7 +61,7 @@ Item {
         id: label
         anchors {
             top: icon.bottom
-            topMargin: units.smallSpacing
+            topMargin: PlasmaCore.Units.smallSpacing
             left: parent.left
             right: parent.right
         }

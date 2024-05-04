@@ -183,7 +183,7 @@ PlasmaCore.ColorScope {
 
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
         }
@@ -250,18 +250,18 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: mainStack
                                 property: "y"
-                                duration: units.longDuration
+                                duration: PlasmaCore.Units.longDuration
                                 easing.type: Easing.InOutQuad
                             }
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: units.longDuration
+                                duration: PlasmaCore.Units.longDuration
                                 easing.type: Easing.OutQuad
                             }
                             OpacityAnimator {
                                 target: inputPanel
-                                duration: units.longDuration
+                                duration: PlasmaCore.Units.longDuration
                                 easing.type: Easing.OutQuad
                             }
                         }
@@ -275,18 +275,18 @@ PlasmaCore.ColorScope {
                             NumberAnimation {
                                 target: mainStack
                                 property: "y"
-                                duration: units.longDuration
+                                duration: PlasmaCore.Units.longDuration
                                 easing.type: Easing.InOutQuad
                             }
                             NumberAnimation {
                                 target: inputPanel
                                 property: "y"
-                                duration: units.longDuration
+                                duration: PlasmaCore.Units.longDuration
                                 easing.type: Easing.InQuad
                             }
                             OpacityAnimator {
                                 target: inputPanel
-                                duration: units.longDuration
+                                duration: PlasmaCore.Units.longDuration
                                 easing.type: Easing.InQuad
                             }
                         }
@@ -407,12 +407,12 @@ PlasmaCore.ColorScope {
             anchors {
                 bottom: parent.bottom
                 left: parent.left
-                margins: units.smallSpacing
+                margins: PlasmaCore.Units.smallSpacing
             }
 
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
 
@@ -444,7 +444,7 @@ PlasmaCore.ColorScope {
 
             Behavior on opacity {
                 OpacityAnimator {
-                    duration: units.longDuration
+                    duration: PlasmaCore.Units.longDuration
                 }
             }
 

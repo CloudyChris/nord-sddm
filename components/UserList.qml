@@ -22,8 +22,8 @@ import QtQuick 2.2
 ListView {
     id: view
     readonly property string selectedUser: currentItem ? currentItem.userName : ""
-    readonly property int userItemWidth: units.gridUnit * 8
-    readonly property int userItemHeight: units.gridUnit * 8
+    readonly property int userItemWidth: PlasmaCore.Units.gridUnit * 8
+    readonly property int userItemHeight: PlasmaCore.Units.gridUnit * 8
 
     implicitHeight: userItemHeight
 

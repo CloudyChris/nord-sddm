@@ -24,7 +24,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.workspace.components 2.0 as PW
 
 Row {
-    spacing: units.smallSpacing
+    spacing: PlasmaCore.Units.smallSpacing
     visible: pmSource.data["Battery"]["Has Cumulative"]
 
     PlasmaCore.DataSource {
