@@ -69,16 +69,16 @@ PlasmaCore.ColorScope {
 
         hoverEnabled: true
         drag.filterChildren: true
-        function onPressed () { uiVisible = true; }
-        function onPositionChanged () { uiVisible = true; }
-        function onUiVisibleChanged () {
+        onPressed: { uiVisible = true; }
+        onPositionChanged: { uiVisible = true; }
+        onUiVisibleChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
             } else if (uiVisible) {
                 fadeoutTimer.restart();
             }
         }
-        function onBlockUIChanged () {
+        onBlockUIChanged: {
             if (blockUI) {
                 fadeoutTimer.running = false;
                 uiVisible = true;
@@ -97,7 +97,7 @@ PlasmaCore.ColorScope {
             id: fadeoutTimer
             running: true
             interval: 60000
-            function onTriggered () {
+            onTriggered: {
                 if (!loginScreenRoot.blockUI) {
                     loginScreenRoot.uiVisible = false;
                 }
@@ -470,7 +470,7 @@ PlasmaCore.ColorScope {
         }
     }
 
-    function onNotificationMessageChanged () {
+    onNotificationMessageChanged: {
         if (notificationMessage) {
             notificationResetTimer.start();
         }

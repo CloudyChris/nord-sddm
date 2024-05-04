@@ -52,7 +52,7 @@ SessionManagementScreen {
         focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
 
-        function onAccepted () {
+        onAccepted: {
             if (root.loginScreenUiVisible) {
                 passwordBox.forceActiveFocus()
             }
@@ -68,7 +68,7 @@ SessionManagementScreen {
 
         Layout.fillWidth: true
 
-        function onAccepted () {
+        onAccepted: {
             if (root.loginScreenUiVisible) {
                 startLogin();
             }
@@ -130,7 +130,7 @@ SessionManagementScreen {
             opacity: enabled ? 1.0 : 1.0
         }
 
-        function onClicked () { startLogin(); }
+        onClicked: { startLogin(); }
     }
 
 }
