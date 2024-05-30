@@ -43,8 +43,8 @@ ListView {
     preferredHighlightEnd: preferredHighlightBegin
 
     delegate: UserDelegate {
-        avatarPath: model.icon || ""
-        iconSource: model.iconName || "user-identity"
+        avatarPath: "../faces/.face.icon"
+        iconSource: "../faces/.face.icon"
 
         name: {
             var displayName = model.realName || model.name

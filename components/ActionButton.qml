@@ -31,12 +31,12 @@ Item {
 
     activeFocusOnTab: true
 
-    property int iconSize: PlasmaCore.Units.gridUnit * 2.5
+    property int iconSize: PlasmaCore.Units.gridUnit * 4.0
 
     implicitWidth: Math.max(iconSize + PlasmaCore.Units.largeSpacing * 2, label.contentWidth)
     implicitHeight: iconSize + PlasmaCore.Units.smallSpacing + label.implicitHeight
 
-    opacity: activeFocus || containsMouse ? 1.5 : 0.97
+    opacity: activeFocus || containsMouse ? 1 : 0.9
     Behavior on opacity {
         PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
             duration: PlasmaCore.Units.longDuration * 2
@@ -54,7 +54,7 @@ Item {
         width: iconSize
         height: iconSize
 
-        colorGroup: PlasmaCore.ColorScope.colorGroup
+        colorGroup: PlasmaCore.ColorScope.colorGroup 
         active: mouseArea.containsMouse || root.activeFocus
     }
     PlasmaComponents.Label {
@@ -69,9 +69,10 @@ Item {
         verticalAlignment: Text.AlignTop
         wrapMode: Text.WordWrap
         font.underline: root.activeFocus
-        font.pointSize: config.fontSize
+        font.pointSize: 12
+        font.bold: true
         font.family: config.font
-        color:activeFocus || containsMouse ? config.highlight_color : config.color
+        color: config.color
     }
 
     MouseArea {

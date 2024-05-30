@@ -154,21 +154,21 @@ PlasmaCore.ColorScope {
 
                 actionItems: [
                     ActionButton {
-                        iconSource: "system-suspend"
+                        iconSource: "./components/artwork/suspend.icon"
                         text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")                        
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
                         visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
-                        iconSource: "system-reboot"
+                        iconSource: "./components/artwork/reboot.icon"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
                         visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
-                        iconSource: "system-shutdown"
+                        iconSource: "./components/artwork/shutdown.icon"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
@@ -373,8 +373,8 @@ PlasmaCore.ColorScope {
             x: root.width / 2 - width / 2
             y: root.height / 2 - height / 3
             radius: 10
-            color: "#2e3440"
-            opacity: 1.0
+            color: "#2e344000"
+            opacity: 0.0
             z:-1
         }
 

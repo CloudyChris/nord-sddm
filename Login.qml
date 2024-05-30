@@ -64,7 +64,7 @@ SessionManagementScreen {
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
         focus: !showUsernamePrompt || lastUserName
         echoMode: TextInput.Password
-        color: "#4C566A"
+        color: "#926514"
 
         Layout.fillWidth: true
 
@@ -126,7 +126,7 @@ SessionManagementScreen {
             width: parent.width
             height: 30
             radius: width / 2
-            color: "#82ABAA"
+            color: "#926514"
             opacity: enabled ? 1.0 : 1.0
         }
 
