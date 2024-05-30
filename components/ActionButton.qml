@@ -45,17 +45,13 @@ Item {
     }
 
 
-    PlasmaCore.IconItem {
+    Image {
         id: icon
         anchors {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
         }
-        width: iconSize
-        height: iconSize
-
-        colorGroup: PlasmaCore.ColorScope.colorGroup 
-        active: mouseArea.containsMouse || root.activeFocus
+        sourceSize: Qt.size(64, 64)
     }
     PlasmaComponents.Label {
         id: label
